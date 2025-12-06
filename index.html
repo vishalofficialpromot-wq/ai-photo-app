@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Photo Editor</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body { font-family: sans-serif; text-align: center; padding: 20px; }
-button { padding: 12px 20px; font-size: 18px; }
-img { width: 90%; margin-top: 20px; border-radius: 10px; }
-</style>
+    <meta charset="UTF-8">
+    <title>My AI Photo App</title>
 </head>
 <body>
-
-<h2>AI Photo Editor</h2>
-
-<input type="file" id="photo" accept="image/*"><br><br>
-
-<button onclick="editPhoto()">Enhance Photo</button>
-
-<img id="output">
-
-<script>
-function editPhoto() {
-    let file = document.getElementById("photo").files[0];
-    if (!file) {
-        alert("Please upload a photo!");
-        return;
-    }
-
-    let imgURL = URL.createObjectURL(file);
-
-    document.getElementById("output").src = imgURL;
-    alert("Your photo is enhanced automatically!");
-}
-</script>
-
+    <h1>Welcome to My AI Photo App</h1>
+    <p>यहां आपका AI टूल चलेगा और फोटो ऑटोमेटिक बनेंगी।</p>
 </body>
 </html>
