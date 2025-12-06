@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>My AI Photo App</title>
+<meta charset="UTF-8">
+<title>My AI Photo App</title>
+
+<style>
+body { 
+    font-family: Arial; 
+    text-align: center; 
+    padding: 20px;
+}
+button {
+    padding: 12px 22px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+#preview {
+    width: 90%;
+    margin-top: 20px;
+    display: none;
+}
+</style>
+
 </head>
 <body>
-    <h1>Welcome to My AI Photo App</h1>
-    <p>यहां आपका AI टूल चलेगा और फोटो ऑटोमेटिक बनेंगी।</p>
-</body>
-</html>
+
+<h2>My AI Photo App</h2>
+<p>यहां फोटो अपलोड करो और AI फोटो जेनरेट करेगा</p>
+
+<input type="file" id="imgInput" accept="image/*">
+<img id="preview">
+
+<button onclick="generate()">Generate AI Photo</button>
+
+<script>
+let imgFile;
+
+document.getElementById("imgInput").onchange = function(e){
+    imgFile = e.target.files[0];
+    document.getElementById("preview").src = URL.createObjectURL(imgFile);
+    document.getElementById("
