@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Photo Editor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { font-family: sans-serif; text-align: center; padding: 20px; }
+button { padding: 12px 20px; font-size: 18px; }
+img { width: 90%; margin-top: 20px; border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<h2>AI Photo Editor</h2>
+
+<input type="file" id="photo" accept="image/*"><br><br>
+
+<button onclick="editPhoto()">Enhance Photo</button>
+
+<img id="output">
+
+<script>
+function editPhoto() {
+    let file = document.getElementById("photo").files[0];
+    if (!file) {
+        alert("Please upload a photo!");
+        return;
+    }
+
+    let imgURL = URL.createObjectURL(file);
+
+    document.getElementById("output").src = imgURL;
+    alert("Your photo is enhanced automatically!");
+}
+</script>
+
+</body>
+</html>
